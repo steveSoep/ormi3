@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 우선순위 점수</title>
+  <style>
+    /* <p>1.후자우선의 원칙</p>
+    <!-- 후자의 p태그 색이 파란색 이다 -->
+
+    <p class="p" id="p">구체성의 원칙(Specificity: 명시도)</p>
+    <!-- id 가 class 보다 더 구체적이므로 '그린' -->
+
+    <!-- ### 2.1 가중치
+    
+    1. **inline 스타일 속성(해당 태그에 직접)**
+    2. **id `#`**
+    3. class `.`, 가상 클래스, 속성선택자
+    4. type(tag), 가상 요소 선택자
+    
+    위와 순서대로 가중치가 높습니다. -->
+
+    <!-- 2.2 우선 순위 계산
+    inline-style 1000점
+    id 선택자 # 100점
+    class ., 가상클래스, 속성선택자 10점
+    타입, 가상요소 선택자 1점
+    전체선택자 * 0점 --> */
+
+    /* 클래스 + 유형 선택자  = 10 + 1 */
+    /* .ul a {
+      color: yellow;
+    } */
+
+    /* 클래스 선택자 = 10 */
+    /* .click {
+      color: green;
+      background: black;
+    } */
+
+    /* 유형 선택자 =  12 */
+    /* html body main section article div ul li p strong span a {
+      background: purple;
+      color: blue;
+    } */
+
+    /* 아무리 구체적으로 작성하였다 하더라도!
+가중치의 점수가 클래스선택자 > 유형 선택자 가중치 법칙을 이 길수는 없다! */
+
+    div .ul {
+      color: green;
+    }
+
+    .ul {
+      color: greenyellow;
+    }
+
+    #click {
+      color: darkgray;
+    }
+
+    span .click {
+      color: red;
+    }
+
+    #span {
+      color: aquamarine;
+    }
+
+    article div ul li p strong span .click {
+      color: black;
+    }
+
+    article div ul li p strong #span .click {
+      color: black;
+    }
+
+    #click {
+      color: goldenrod;
+    }
+
+    /* ----- 배경색 ----- */
+    #span #click {
+      /* 최종색 */
+      background-color: khaki;
+    }
+
+    #span .click {
+      background-color: cornflowerblue;
+    }
+
+    span #click {
+      background-color: rebeccapurple;
+    }
+
+    #span a {
+      background-color: sandybrown;
+    }
+
+    #click {
+      background-color: lawngreen;
+    }
+
+    .click {
+      background-color: tomato;
+    }
+
+    span a {
+      background-color: yellow;
+    }
+
+    main section article div .ul li p strong #span .click {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section>
+      <article>
+        <div>
+          <ul class="ul">
+            <li>ul>li <!--green-->
+              <p>
+                <strong>
+                  <span id="span">
+                    <a href="#" class="click" id="click">
+                      1. 이 글자는 어떤 색일까요?
+                      2. 배경색은 어떤 색일까요?
+                    </a>
+                  </span>
+                </strong>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- 연습 -->
+  <main>
+    <section>
+      <div>
+        <div>
+          <p>
+          <ul>
+
+          </ul>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
