@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docum</title>
+  <style>
+    /* body:nth-child(2) { ???
+      color: lightblue;
+    } */
+
+    div:nth-child(2) {
+      color: red;
+    }
+
+    ul:nth-child(2) {
+      background-color: tomato;
+    }
+
+    .wrap .box:nth-child(3) {
+      color: green;
+      background-color: chartreuse;
+    }
+
+    body>span {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>h1</h1>
+  <ul>ul
+    <li>ul>li</li>
+    <li>ul>li<span>li>span</span></li>
+  </ul>
+  <div class="wrap">wrap
+    <div class="box">Box1</div>
+    <div class="box">Box2</div>
+    <div class="box">Box3</div>
+  </div>
+  <span>span
+    <em>em</em>
+  </span>
+</body>
+
+</html>

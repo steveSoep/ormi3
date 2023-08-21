@@ -1,0 +1,58 @@
+ul {
+  list-style: none;
+}
+
+/* 회원가입 페이지 */
+.join {
+  width: 400px;
+  margin: auto;
+}
+
+.main-title,
+.main-desc {
+  text-align: center;
+}
+
+.main-desc {
+  color: rgb(153, 149, 149);
+  margin: 15px 0px 40px;
+}
+
+/* main-form */
+.main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* input, label */
+.flex-input {
+  display: flex;
+  align-items: center;
+}
+
+.flex-input input {
+  height: 28px;
+  flex-grow: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.join-btn {
+  background-color: royalblue;
+  border: 0;
+  border-radius: 4px;
+  height: 32px;
+  color: white;
+  font-weight: bold;
+
+  transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+  background-color: rgb(26, 197, 26);
+}
+
+.join-btn:disabled {
+  background-color: #ccc;
+}

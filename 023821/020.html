@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: royalblue;
+      float: left;
+      margin-right: 20px;
+      border: 0.5px solid black;
+      /* clear: left; */
+    }
+
+    /* .clear {
+      clear: both;
+    } */
+
+    .box:first-child {
+      float: left;
+      border: 3px solid red;
+    }
+
+    /* .container {
+      overflow: hidden;
+    } */
+  </style>
+</head>
+
+<body>
+  <div>
+    <span class="box">box</span>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit doloremque velit qui enim vel atque, et ea
+      laudantium praesentium doloribus harum quod ipsa rerum perferendis aspernatur dignissimos sunt dolor voluptas.</p>
+  </div>
+  <p class="clear">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et eius, natus, dolorem nihil itaque optio
+    accusantium
+    quod aliquid quos error eos. Praesentium repellat sequi nam inventore perspiciatis nesciunt soluta eveniet.</p>
+
+  <div class="container">container
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+</body>
+
+</html>
