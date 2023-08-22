@@ -1,0 +1,87 @@
+/* ----- 초기화 Reset ----- */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+fieldset,
+legend,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+button:enabled {
+  cursor: pointer;
+}
+
+body {
+  /* font-family: 'Nanum Myeongjo', serif; */
+  font-family: 'Pretendard-Regular', sans-serif;
+}
+
+
+/* ----- main ----- */
+/* 로그인 페이지 */
+.login {
+  width: 400px;
+  /* background-color: beige; */
+  border: 0.3px dashed rgb(182, 182, 182);
+  margin: auto;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 24px;
+}
+
+.main-desc {
+  color: #767676;
+  margin: 10px 0 20px;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 컨테이너2 */
+.main-form div {
+  display: flex;
+  align-items: center;
+}
+
+.main-form div label {
+  width: 80px;
+}
+
+.main-form div input {
+  height: 28px;
+  flex-grow: 1;
+}
+
+/* checkbox, id-save */
+#id-save {
+  flex-grow: 0;
+}
+
+#la-save {
+  width: 120px;
+}
+
+/* 컨테이너2 : 아이템 */
+.flex-input label {
+  display: flex;
+}
+
+.login-btn {
+  height: 36px;
+  background-color: royalblue;
+  border: 0;
+  color: white;
+}
